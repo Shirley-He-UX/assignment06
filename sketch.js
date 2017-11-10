@@ -45,34 +45,34 @@ function draw() {
         for(var j=0;j<careerdays[i]+1;j++){
       rect(80+j*2,y[i]+height/3+48,0.9,4);
     }
-    ellipse(0,y[i]+height/3,p/1.1);
-    rect(380,y[i]+height/3-80,daysInSpace,10);
+    ellipse(0,y[i]+height/2.8,p/1.1);
+    rect(380,y[i]+height/2.8-80,daysInSpace,10);
 
     fill(255,255,255,p);
     textStyle(BOLD);
     textSize(28);
-    text(names[i],80,y[i]+height/3-30);
+    text(names[i],80,y[i]+height/2.8-30);
     
     noStroke();
     fill(200,200,200,p);
     textStyle(NORMAL);
     textSize(13);
-    text(titles[i],80,y[i]+height/3-6);
+    text(titles[i],80,y[i]+height/2.8-6);
     textSize(10);
-    text(countrys[i],80,y[i]+height/3+76);
+    text(countrys[i],80,y[i]+height/2.8+72);
     
 
     
     textSize(10);
-    text('DAYS  IN  '+locations[i]+': '+(Date.now()-Date.parse(launchdates[i]))/1000/60/60/24,80,y[i]+height/3-71);
+    text('DAYS  IN  '+locations[i]+': '+(Date.now()-Date.parse(launchdates[i]))/1000/60/60/24,80,y[i]+height/2.8-71);
     
     textSize(6);
-    text('CAREERDAYS : '+careerdays[i],80,y[i]+height/3+42);
+    text('CAREERDAYS : '+careerdays[i],80,y[i]+height/2.8+42);
     
     textSize(4);
-    text('BIOLINK : '+ biolinks[i],80,y[i]+height/3+10);
-    text('BIO : '+ bios[i],80,y[i]+height/3+18);
-    text('TWITTERS : '+ twitters[i],80,y[i]+height/3+26);
+    text('BIOLINK : '+ biolinks[i],80,y[i]+height/2.8+10);
+    text('BIO : '+ bios[i],80,y[i]+height/2.8+18);
+    text('TWITTERS : '+ twitters[i],80,y[i]+height/2.8+26);
   }   
 
   
