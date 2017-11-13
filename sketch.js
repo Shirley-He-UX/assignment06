@@ -16,8 +16,8 @@ function preload(){
 }
 
 function setup() {
-   createCanvas(windowWidth,windowHeight);
-   //createCanvas(500,500);
+   //createCanvas(windowWidth,windowHeight);
+   createCanvas(500,500);
    for(var i=0;i<peoples.people.length;i++){
       biolinks.push(peoples.people[i].biolink);
       titles.push(peoples.people[i].title);
