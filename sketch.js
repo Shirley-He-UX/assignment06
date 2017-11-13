@@ -17,7 +17,7 @@ function preload(){
 
 function setup() {
    createCanvas(windowWidth,windowHeight);
-
+   //createCanvas(500,500);
    for(var i=0;i<peoples.people.length;i++){
       biolinks.push(peoples.people[i].biolink);
       titles.push(peoples.people[i].title);
@@ -36,43 +36,43 @@ function draw() {
   background(33);
   text("SCROLL UP TO SEE MORE",10,-10)
   for(var i=0;i<peoples.people.length;i++){
-    var p = map(height-abs(y[i]*2-height/4),0,height*1.2,0,255);
+    var p = map(height-abs(y[i]*2-height/3),0,height*1.2,0,255);
     var daysInSpace = (Date.now()-Date.parse(launchdates[i]))/1000/60/60/24/2;
     //var f = map(daysInSpace,0,200,0,255)
     
     fill(i*255/peoples.people.length,200,90,p/1.4-20);
     //stroke(100,100,100,p);
         for(var j=0;j<careerdays[i]+1;j++){
-      rect(80+j*2,y[i]+height/3+48,0.9,4);
+      rect(80+j*2,y[i]+height/2.5+48,0.9,4);
     }
-    ellipse(0,y[i]+height/2.8,p/1.1);
-    rect(380,y[i]+height/2.8-80,daysInSpace,10);
+    ellipse(0,y[i]+height/2.5,p/1.1);
+    rect(380,y[i]+height/2.5-80,daysInSpace,10);
 
     fill(255,255,255,p);
     textStyle(BOLD);
     textSize(28);
-    text(names[i],80,y[i]+height/2.8-30);
+    text(names[i],80,y[i]+height/2.5-30);
     
     noStroke();
     fill(200,200,200,p);
     textStyle(NORMAL);
     textSize(13);
-    text(titles[i],80,y[i]+height/2.8-6);
+    text(titles[i],80,y[i]+height/2.5-6);
     textSize(10);
-    text(countrys[i],80,y[i]+height/2.8+72);
+    text(countrys[i],80,y[i]+height/2.5+72);
     
 
     
     textSize(10);
-    text('DAYS  IN  '+locations[i]+': '+(Date.now()-Date.parse(launchdates[i]))/1000/60/60/24,80,y[i]+height/2.8-71);
+    text('DAYS  IN  '+locations[i]+': '+(Date.now()-Date.parse(launchdates[i]))/1000/60/60/24,80,y[i]+height/2.5-71);
     
     textSize(6);
-    text('CAREERDAYS : '+careerdays[i],80,y[i]+height/2.8+42);
+    text('CAREERDAYS : '+careerdays[i],80,y[i]+height/2.5+42);
     
     textSize(4);
-    text('BIOLINK : '+ biolinks[i],80,y[i]+height/2.8+10);
-    text('BIO : '+ bios[i],80,y[i]+height/2.8+18);
-    text('TWITTERS : '+ twitters[i],80,y[i]+height/2.8+26);
+    text('BIOLINK : '+ biolinks[i],80,y[i]+height/2.5+10);
+    text('BIO : '+ bios[i],80,y[i]+height/2.5+18);
+    text('TWITTERS : '+ twitters[i],80,y[i]+height/2.5+26);
   }   
 
   
